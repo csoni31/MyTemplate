@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Template.Site" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/font.css" rel="stylesheet" />
+    <link href="Images/nalcoicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <div class="page">
+            <div class="header">
+                <div class="title">
+                    <h1>NALCO Application Template
+                    </h1>
+                </div>
+                <div class="loginDisplay">
+                    Welcome <asp:Label runat="server" ID="lbl_Username" Text="" /> | <a href="Default.aspx" style="text-decoration: none">Logout</a>
+                </div>
+                <div class="clear hideSkiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="Data_Entry.aspx" Text="Data Entry" />
+                            <asp:MenuItem NavigateUrl="Report.aspx" Text="Report" />
+                            <asp:MenuItem NavigateUrl="Contact.aspx" Text="Contact" />
+                            
+                        </Items>
+                    </asp:Menu>
+                </div>
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="footer">
+            Devaloped & Maintained by NALCO Refinery Systems Department.
+        </div>
+    </form>
+</body>
+</html>
