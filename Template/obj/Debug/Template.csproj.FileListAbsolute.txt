@@ -1,0 +1,9 @@
+E:\Projects\Template\Template\obj\Debug\Template.csprojResolveAssemblyReference.cache
+E:\Projects\Template\Template\obj\Debug\RdlCompile.cache
+E:\Projects\Template\Template\obj\Debug\RdlCompile.compiled
+E:\Projects\Template\Template\bin\Template.dll.config
+E:\Projects\Template\Template\bin\Template.dll
+E:\Projects\Template\Template\bin\Template.pdb
+E:\Projects\Template\Template\bin\AjaxControlToolkit.dll
+E:\Projects\Template\Template\obj\Debug\Template.dll
+E:\Projects\Template\Template\obj\Debug\Template.pdb
