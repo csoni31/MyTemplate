@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Report.aspx.cs" Inherits="Template.Report" %>
-
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
@@ -18,9 +18,18 @@
                                 </DataSources>
                             </LocalReport>
                         </rsweb:ReportViewer>
-                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetData" TypeName="Template.DataSetTableAdapters.app_common_loginTableAdapter"></asp:ObjectDataSource>
+                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetData" TypeName="DatabaseDataSetTableAdapters.guarantees_dataTableAdapter"></asp:ObjectDataSource>
                         
 
+                        <%--<rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
+                            <LocalReport ReportPath="Report4.rdlc">
+                                <DataSources>
+                                    <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="DataSet2" />
+                                </DataSources>
+                            </LocalReport>
+                        </rsweb:ReportViewer>
+                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetData" TypeName="Template.DataSetTableAdapters.app_common_loginTableAdapter"></asp:ObjectDataSource>                        
+                    --%>
                     </fieldset>
                         
         </div>
